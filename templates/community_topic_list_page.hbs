@@ -1,0 +1,134 @@
+<div class="home-page">
+<h1 class="visibility-hidden">{{ t 'community'}}</h1>
+
+<section class="section hero community-hero">
+  <h2 class="visibility-hidden">{{ t 'search'}}</h2>
+  <div class="hero-inner">
+    <h1 class="welcome-text">Welcome to Community Feedback!</h1>
+          <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+<path d="M3.6396 15.843C4.60488 18.1143 6.4329 19.9091 8.72151 20.8326C11.0101 21.7561 13.5719 21.7327 15.8432 20.7674C18.1145 19.8021 19.9093 17.9741 20.8328 15.6855C21.7563 13.3969 21.7328 10.8351 20.7675 8.56382C19.8023 6.29252 17.9742 4.49769 15.6856 3.5742C13.397 2.6507 10.8353 2.67417 8.56397 3.63945C6.29266 4.60473 4.49784 6.43275 3.57434 8.72137C2.65084 11.01 2.67432 13.5717 3.6396 15.843Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.7831 18.7827L26 26.0007" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<!--     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    </svg> -->
+    {{search submit=false class='search search-full' scoped=settings.scoped_community_search}}
+  </div>
+</section>
+  <nav class="container community-sub-nav sub-nav">
+    {{breadcrumbs}}
+  </nav>
+  <div class="announcements">
+<!--     <h1>Announcements from Addigy</h1> -->
+    <span class="posting">Everything you need to know about posting</span>
+    <span class="post-to-community">
+      <a class="community-read-post button button-large" href="https://support.addigy.com/hc/en-us/articles/4411904749331">Read Post</a>
+    </span>
+  </div>
+<div class="container">
+
+  <header class="page-header community-header">
+<!--       <span class="dropdown"> -->
+          <button class="dropdown-toggle" aria-haspopup="true">
+            <h2 class="title">
+              Feedback Topics
+            </h2>
+<!--             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg> -->
+          </button>
+<!--         <span class="dropdown-menu" role="menu">
+          {{#link 'topics' role='menuitem' selected='true'}}
+            {{t 'show_topics'}}
+          {{/link}}
+          {{#link 'posts' role='menuitem'}}
+            {{t 'show_all_posts'}}
+          {{/link}}
+        </span> -->
+<!--       </span> -->
+    <span class="post-to-community">
+      <a class="community-create-a-post button button-large" href="/hc/en-us/community/posts/new">Create a post</a>
+    </span>
+  </header>
+
+  {{#unless topics}}
+    <p>{{t 'no_content'}}</p>
+  {{/unless}}
+
+  <div id="main-content" class="blocks topics">
+    <ul class="blocks-list topics-list">
+      {{#each topics}}
+        <li class="blocks-item topics-item {{#if internal}}blocks-item-internal{{/if}}" id="community-icon-{{id}}">
+           <a href="{{url}}" class="blocks-item-link">
+             <span class="blocks-item-title">
+               {{name}}
+
+               {{#if internal}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+                  <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+                  <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+                </svg>
+               {{/if}}
+             </span>
+             <span class="blocks-item-description">{{excerpt description}}</span>
+             
+           </a>
+          <ul class="meta-group">
+               <li class="meta-data">{{t 'post_count' count=post_count}}</li>
+               <li class="meta-data">{{t 'follower_count' count=follower_count}}</li>
+             </ul>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{pagination}}
+  <div id="other-articles">
+    <div class="container">
+
+      <ul class="tab-switcher">
+        <li><a href="#top-articles">Featured Posts</a></li>
+        <li><a href="#recently-viewed">Recent activity (Community)</a></li>
+      </ul>
+
+      <div id="top-articles">
+       {{#if featured_posts}}
+        <section class="section community-featured-posts">
+          <ul class="article-list promoted-articles">
+            {{#each featured_posts}}
+              <li class="promoted-articles-item">
+                {{!--#each path_steps}}
+                {{#isnt @index 0}}
+              	{{name}}<br/>
+                {{/isnt}}
+              {{/each--}}
+                <a href="{{url}}">
+                  <strong>{{title}}</strong>
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </section>
+      {{/if}}
+      </div>
+
+      <div id="recently-viewed">
+        <section class="community-activity activity">
+          {{#if help_center.community_enabled}}
+            {{recent_activity scope='community'}}
+          {{/if}}
+        </section>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+<!--   <section class="container community-footer">
+    <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
+    {{link 'new_post' class='button button-large'}}
+  </section> -->
+</div>
+</div>

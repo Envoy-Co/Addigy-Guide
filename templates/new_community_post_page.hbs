@@ -1,0 +1,76 @@
+<!-- <div class="container-divider"></div> -->
+  <nav class="communitypages-sub-nav sub-nav">
+   
+    <div class="search-container">
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+<path d="M3.6396 15.8431C4.60488 18.1144 6.4329 19.9093 8.72151 20.8328C11.0101 21.7563 13.5719 21.7328 15.8432 20.7675C18.1145 19.8022 19.9093 17.9742 20.8328 15.6856C21.7563 13.397 21.7328 10.8353 20.7675 8.56394C19.8023 6.29264 17.9742 4.49782 15.6856 3.57432C13.397 2.65082 10.8353 2.67429 8.56397 3.63958C6.29266 4.60486 4.49784 6.43288 3.57434 8.72149C2.65084 11.0101 2.67432 13.5718 3.6396 15.8431V15.8431Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.7831 18.7828L26 26.0008" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      {{search submit=false}}
+    </div>
+  </nav>
+ {{breadcrumbs}}
+<div class="container">
+
+
+  <h1 class="community-form-header form-header">
+    {{t 'what_is_your_post_about'}}
+  </h1>
+
+  <div id="main-content" class="form">
+    {{#form 'post' class='new_community_post'}}
+        <div class="form-field">
+        {{#required 'topic'}}
+          {{label 'topic'}}
+        {{else}}
+          {{#label 'topic'}}
+            {{t 'topic_label'}}<span class="optional">({{t 'optional'}})</span>
+          {{/label}}
+        {{/required}}
+        {{select 'topic'}}
+        {{#validate 'topic'}}
+          <div class="notification notification-error notification-inline">
+            {{error 'topic'}}
+          </div>
+        {{/validate}}
+      </div>
+      <div class="form-field">
+        {{#required 'title'}}
+          {{label 'title'}}
+        {{else}}
+          {{#label 'title'}}
+            {{t 'title_label'}}<span class="optional">({{t 'optional'}})</span>
+          {{/label}}
+        {{/required}}
+        {{input 'title' autofocus=true}}
+        {{#validate 'title'}}
+          <div class="notification notification-error notification-inline">
+            {{error 'title'}}
+          </div>
+        {{/validate}}
+      </div>
+
+      {{suggestion_list class='suggestion-list'}}
+
+      <div class="form-field">
+        {{#required 'details'}}
+          {{label 'details'}}
+        {{else}}
+          {{#label 'details'}}
+            {{t 'details_label'}}<span class="optional">({{t 'optional'}})</span>
+          {{/label}}
+        {{/required}}
+        {{wysiwyg 'details'}}
+        {{#validate 'details'}}
+          <div class="notification notification-error notification-inline">
+            {{error 'details'}}
+          </div>
+        {{/validate}}
+      </div>
+
+
+
+      <footer>{{input type='submit'}}</footer>
+    {{/form}}
+  </div>
+</div>

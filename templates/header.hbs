@@ -1,0 +1,64 @@
+<a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
+
+{{!— Alerts —}}
+{{#if settings.show_alert_checkbox  }}
+  <div id="alerts-banner">
+    <div class="alert">
+      {{#if settings.alert_text_url}}
+        <a href="{{settings.alert_text_url}}">{{settings.alert_text}}</a>
+      {{else}}
+        {{settings.alert_text}}
+      {{/if}}
+    </div>
+  </div>
+{{/if}}
+  
+<header class="header">
+  <div class="logo">
+    {{#link 'help_center'}}
+      <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
+      {{#if settings.show_brand_name}}
+        <span aria-hidden="true">{{help_center.name}}</span>
+      {{/if}}
+    {{/link}}
+  </div>
+  <div class="nav-wrapper">
+    <button class="menu-button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
+      </svg>
+    </button>
+    <nav class="user-nav" id="user-nav">
+      <a href="https://addigy.com/" class="back-to-link">Back to <span>Addigy.com</span></a>
+      <a href="https://support.addigy.com/hc/en-us/community/topics" class="back-to-link">Community Feedback</a>
+      <!-- {{link 'community'}} -->
+      {{link 'new_request' class='submit-a-request'}}
+      <div class="btn btn-outline status-io status-ok ">
+        <a href="https://status.addigy.com/" target="_blank">All Systems Operational</a>
+      </div>
+    </nav>
+    {{#if signed_in}}
+      <div class="user-info dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+          {{user_avatar class="user-avatar"}}
+          <span class="hide-on-mobile">
+            {{user_name}}
+            <svg width="5" height="11" viewBox="0 0 5 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L1.96447 1.96447C3.91709 3.91709 3.91709 7.08291 1.96447 9.03553L1 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          {{link "my_activities" role="menuitem"}}
+          {{my_profile role="menuitem"}}
+          {{change_password role="menuitem"}}
+          {{link "sign_out" role="menuitem"}}
+        </div>
+      </div>
+    {{else}}
+      {{#link "sign_in" class="sign-in button button-large"}}
+        {{t 'sign_in'}}
+      {{/link}}
+    {{/if}}
+  </div>
+</header>

@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.8 28.1H15C12.2 28.1 10 30.3 10 33.1V88.1C10 90.9 12.2 93.1 15 93.1H39.8V28.1Z" fill="#F5F5F5"/>
+<path d="M105 88.1H15C12.2 88.1 10 85.9 10 83.1V28.1C10 25.3 12.2 23.1 15 23.1H105C107.8 23.1 110 25.3 110 28.1V83.1C110 85.9 107.8 88.1 105 88.1Z" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 23.1V88.1" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 40.6H30" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 50.6H30" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 60.6H30" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 58.1C64.1421 58.1 67.5 54.7421 67.5 50.6C67.5 46.4579 64.1421 43.1 60 43.1C55.8579 43.1 52.5 46.4579 52.5 50.6C52.5 54.7421 55.8579 58.1 60 58.1Z" fill="#F5F5F5"/>
+<path d="M90 58.1C94.1421 58.1 97.5 54.7421 97.5 50.6C97.5 46.4579 94.1421 43.1 90 43.1C85.8579 43.1 82.5 46.4579 82.5 50.6C82.5 54.7421 85.8579 58.1 90 58.1Z" fill="#F5F5F5"/>
+<path d="M60 83.1C64.1421 83.1 67.5 79.7421 67.5 75.6C67.5 71.4579 64.1421 68.1 60 68.1C55.8579 68.1 52.5 71.4579 52.5 75.6C52.5 79.7421 55.8579 83.1 60 83.1Z" fill="#F5F5F5"/>
+<path d="M90 83.1C94.1421 83.1 97.5 79.7421 97.5 75.6C97.5 71.4579 94.1421 68.1 90 68.1C85.8579 68.1 82.5 71.4579 82.5 75.6C82.5 79.7421 85.8579 83.1 90 83.1Z" fill="#F5F5F5"/>
+<path d="M60 53.1C64.1421 53.1 67.5 49.7421 67.5 45.6C67.5 41.4579 64.1421 38.1 60 38.1C55.8579 38.1 52.5 41.4579 52.5 45.6C52.5 49.7421 55.8579 53.1 60 53.1Z" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 53.1C94.1421 53.1 97.5 49.7421 97.5 45.6C97.5 41.4579 94.1421 38.1 90 38.1C85.8579 38.1 82.5 41.4579 82.5 45.6C82.5 49.7421 85.8579 53.1 90 53.1Z" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 78.1C64.1421 78.1 67.5 74.7421 67.5 70.6C67.5 66.4579 64.1421 63.1 60 63.1C55.8579 63.1 52.5 66.4579 52.5 70.6C52.5 74.7421 55.8579 78.1 60 78.1Z" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 78.1C94.1421 78.1 97.5 74.7421 97.5 70.6C97.5 66.4579 94.1421 63.1 90 63.1C85.8579 63.1 82.5 66.4579 82.5 70.6C82.5 74.7421 85.8579 78.1 90 78.1Z" stroke="#282828" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
